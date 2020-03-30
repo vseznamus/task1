@@ -22,17 +22,20 @@ class Time {
     }
 
     private void secondsInMinutesAndHours() {
-
         while (deSeconds >= MAX_SEC_MIN) {
+
             minutes = minutes + (deSeconds / 60);
             deSeconds = deSeconds % 60;
+
             if (minutes >= MAX_SEC_MIN) {
                 hours = hours + (minutes / 60);
                 minutes = minutes % 60;
             }
+
             while (hours >= MAX_HOURS) {
                 hours = hours % 24;
             }
+
         }
     }
 

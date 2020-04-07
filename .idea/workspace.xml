@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b127d2e-97a5-4717-bfad-12f2ea41d02b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSF_domarev_k_v_task/Exceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSF_domarev_k_v_task/Exceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSF_domarev_k_v_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSF_domarev_k_v_task/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSF_domarev_k_v_task/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSF_domarev_k_v_task/Time.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="740" />
   </component>
   <component name="ProjectId" id="1Y6nz0YRgEIkRPst9B7XdTiHqOJ" />
   <component name="PropertiesComponent">

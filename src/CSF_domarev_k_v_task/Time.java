@@ -1,41 +1,47 @@
 package CSF_domarev_k_v_task;
 
+import static CSF_domarev_k_v_task.Exceptions.*;
+
 class Time {
 
-    public static final int MAX_HOURS = 24;
-    public static final int MAX_SEC_MIN = 60;
+    private static final int MAX_HOURS = 24;
+    private static final int MAX_SEC = 60;
+    private static final int MAX_MIN = 60;
 
     private int seconds;
     private int minutes;
     private int hours;
     private int deSeconds;
 
-    Time(int seconds) throws Exception {
+    Time(int seconds) {
         this.seconds = seconds;
         deSeconds = seconds;
-        Exceptions.secondsException(seconds);
+
+        if (seconds < 0) {
+            secondsException();
+        }
+
         secondsInMinutesAndHours();
     }
 
-    public static int timeDifference(Time now, Time now2) {
+    public int showTimeDifference(Time now, Time now2) {
         return now.seconds - now2.seconds;
     }
 
     private void secondsInMinutesAndHours() {
-        while (deSeconds >= MAX_SEC_MIN) {
+        if (deSeconds >= MAX_SEC) {
 
             minutes = minutes + (deSeconds / 60);
             deSeconds = deSeconds % 60;
 
-            if (minutes >= MAX_SEC_MIN) {
+            if (minutes >= MAX_MIN) {
                 hours = hours + (minutes / 60);
                 minutes = minutes % 60;
             }
 
-            while (hours >= MAX_HOURS) {
+            if (hours >= MAX_HOURS) {
                 hours = hours % 24;
             }
-
         }
     }
 
@@ -51,22 +57,51 @@ class Time {
         return deSeconds;
     }
 
-    public String getFullTimeInFormat() {
+    public String getStringTime() {
         return (Integer.toString(hours) + ":" + Integer.toString(minutes) + ":" + Integer.toString(deSeconds));
     }
 
-    public int addReduceHours(int n) throws Exception {
-        Exceptions.hoursAddException(n, hours);
+    public int addReduceHours(int n) {
+        hours = hours + n;
+
+        while (hours >= Time.MAX_HOURS) {
+            hours = hours % 24;
+        }
+
+        if (hours < 0) {
+            hoursAddException();
+        }
+
         return hours;
     }
 
-    public int addReduceMinutes(int n) throws Exception {
-        Exceptions.minutesAddException(n, hours, minutes);
+    public int addReduceMinutes(int n) {
+        minutes = minutes + n;
+
+        if (minutes >= Time.MAX_MIN) {
+            hours = hours + (minutes / 60);
+            minutes = minutes % 60;
+        }
+
+        if (minutes < 0) {
+            minutesAddException();
+        }
+
         return minutes;
     }
 
-    public int addReduceSeconds(int n) throws Exception {
-        Exceptions.secondsAddException(deSeconds, n, minutes);
+    public int addReduceSeconds(int n) {
+        deSeconds = deSeconds + n;
+
+        if (deSeconds >= Time.MAX_SEC) {
+            minutes = minutes + (deSeconds / 60);
+            deSeconds = deSeconds % 60;
+        }
+
+        if (deSeconds < 0) {
+            secondsAddException();
+        }
+
         return deSeconds;
     }
 

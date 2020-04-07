@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde2fc04-6657-4b9a-94a8-d48b6ce4afc5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSF_domarev_k_v_task/Exceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSF_domarev_k_v_task/Exceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSF_domarev_k_v_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSF_domarev_k_v_task/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSF_domarev_k_v_task/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSF_domarev_k_v_task/Time.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +239,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

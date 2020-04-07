@@ -29,20 +29,9 @@ class Time {
     }
 
     private void secondsInMinutesAndHours() {
-        if (deSeconds >= MAX_SEC) {
-
-            minutes = minutes + (deSeconds / 60);
-            deSeconds = deSeconds % 60;
-
-            if (minutes >= MAX_MIN) {
-                hours = hours + (minutes / 60);
-                minutes = minutes % 60;
-            }
-
-            if (hours >= MAX_HOURS) {
-                hours = hours % 24;
-            }
-        }
+        hours = deSeconds / 3600;
+        minutes = (deSeconds - hours * 3600) / 60;
+        deSeconds = deSeconds - hours * 3600 - minutes * 60;
     }
 
     public int getHours() {

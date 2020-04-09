@@ -30,6 +30,10 @@ class Time {
 
     private void secondsInMinutesAndHours() {
         hours = deSeconds / 3600;
+
+        if (hours >= Time.MAX_HOURS)
+            hours = hours % 24;
+
         minutes = (deSeconds - hours * 3600) / 60;
         deSeconds = deSeconds - hours * 3600 - minutes * 60;
     }
